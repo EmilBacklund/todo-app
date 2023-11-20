@@ -13,9 +13,6 @@ export const newBoardSlice = createSlice({
     toggle: (state) => {
       state.open = !state.open;
     },
-    // incrementByAmount: (state, action) => {
-    //   state.value += action.payload;
-    // },
   },
 });
 
