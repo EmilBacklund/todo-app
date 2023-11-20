@@ -10,7 +10,7 @@ const NewBoardModal = () => {
   const { theme } = useSelector((state: themeProps) => state.theme);
 
   return (
-    <div className='absolute rounded-lg w-[70%] top-20 left-1/2 -translate-x-1/2 z-20 dark:bg-dark-grey bg-white text-white'>
+    <div className='absolute rounded-lg w-[70%] top-4 left-1/2 -translate-x-1/2 z-20 dark:bg-dark-grey bg-white text-white'>
       <div className='py-4 pr-6'>
         <div className='pl-6 mb-5'>
           <h2 className='text-xs font-bold text-medium-grey '>ALL BOARDS (1)</h2>

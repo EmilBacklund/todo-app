@@ -11,7 +11,7 @@ const Overlay = () => {
       onClick={() => {
         dispatch(toggle());
       }}
-      className='absolute top-16 left-0 bottom-0 right-0 bg-black/50 z-10'
+      className='absolute top-0 left-0 bottom-0 right-0 bg-black/50 z-10'
     ></div>
   );
 };

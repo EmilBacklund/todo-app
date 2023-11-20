@@ -30,29 +30,33 @@ export default function Home() {
   return (
     <html className={`${theme} ${jakarta.className}`} lang='en'>
       <body className={`dark:bg-very-dark-grey bg-light-grey dark:text-white text-black`}>
-        <Header />
         <div className='flex'>
           <SideMenu />
-          <div className='relative w-full'>
-            <main className='px-4'>
-              <div className='grid place-items-center min-h-[calc(100vh-64px)] md:min-h-[calc(100vh-81px)]'>
-                <div className='flex flex-col items-center gap-6'>
-                  <p className='text-center text-lg text-medium-grey font-bold'>
-                    This board is empty. Create a new column to get started.
-                  </p>
-                  <button className='bg-main-purple hover:bg-main-purple-hover h-12 w-44 rounded-3xl text-base font-bold text-white'>
-                    +Add New Column
-                  </button>
-                </div>
+          <div className='w-full'>
+            <Header />
+            <div className='flex'>
+              <div className='relative w-full'>
+                <main className='px-4'>
+                  <div className='grid place-items-center min-h-[calc(100vh-64px)] md:min-h-[calc(100vh-81px)]'>
+                    <div className='flex flex-col items-center gap-6'>
+                      <p className='text-center text-lg text-medium-grey font-bold'>
+                        This board is empty. Create a new column to get started.
+                      </p>
+                      <button className='bg-main-purple hover:bg-main-purple-hover h-12 w-44 rounded-3xl text-base font-bold text-white'>
+                        +Add New Column
+                      </button>
+                    </div>
+                  </div>
+                </main>
+                {open && (
+                  <div className='md:hidden'>
+                    <NewBoardModal />
+                    <Overlay />
+                  </div>
+                )}
+                <ToggleSideMenu />
               </div>
-            </main>
-            {open && (
-              <div className='md:hidden'>
-                <NewBoardModal />
-                <Overlay />
-              </div>
-            )}
-            <ToggleSideMenu />
+            </div>
           </div>
         </div>
       </body>
